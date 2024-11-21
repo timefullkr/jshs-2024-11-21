@@ -1,0 +1,120 @@
+body {
+    position: relative;
+    font-family:'SCoreDream','NanumBarunGothic'; 
+    font-size: 1em !important;
+    background-color:  #00292f; 
+   
+  }
+  .card-text {
+      position: relative;
+      font-family:'NanumBarunGothic'; 
+      font-size: 1.05em !important;
+  }
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.review-loading {
+    display: none;
+    text-align: center;
+    padding: 10px;
+}
+.card {
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.stars {
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+.nutri-score {
+    color: #01a6a6;
+}        
+.pref-score {
+    color: #00c5c5;
+}
+
+.visits-count {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(1, 62, 50, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+#date-buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.date-btn {
+    min-width: 120px;
+}
+.review-section {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.card-col.highlight {
+    animation: highlightAnimation 1s;
+}
+
+@keyframes highlightAnimation {
+    from { background-color: #ffffcc; }
+    to { background-color: transparent; }
+}
+.card-col {
+    transition: transform 0.5s;
+}
+
+.card-col.moving {
+    transform: translateY(-10px);
+}
+.reaction-btn.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.review-section {
+    margin-top: 1rem;
+}
+
+.review-text span {
+    vertical-align: middle;
+    text-align: justify; /* span 내부 텍스트도 양쪽 정렬 */
+    width: 100%; /* span이 전체 너비를 사용하도록 */
+    display: inline-block; /* 블록 레벨 정렬을 위해 */
+}
+.review-text {
+    word-break: break-word;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.ai-review-content {
+    display: inline;
+}
+
+.ai-review-content svg {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    vertical-align: -4px;
+}

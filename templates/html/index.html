@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI 스쿨랭 - 인공지능이 평가하는 오늘의 학교 급식 리뷰, 제주과학고등학교 1학년 인공지능 기초 과목 실습작">
+    <title>AI 스쿨랭</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body >
+    <div class="container py-4">
+        <div class="text-center text-warning NanumMyeongjo fs-1 border-bottom border-warning">AI 스쿨랭</div>
+        
+        <div class="py-2  d-flex flex-wrap justify-content-between align-items-center mb-4 border-bottom border-secondary "  >
+                <div class="px-4" style="color: #03e6e6;">
+                    <i class="fa-solid fa-user-group"></i>
+                    <sub id="connection-count">0</sub>
+                </div>
+                
+                 <div id="date-buttons" class="align-items-center gap-2 "></div>
+                
+                <div class="d-flex align-items-center ">
+                    <button class="btn btn-link me-2" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#helpModal"
+                            title="도움말"
+                            >
+                        <i class="fa-solid fa-circle-question text-warning" ></i>
+                    </button>
+                    <div class="form-check form-switch" title="카드 본문 보기/숨기기">
+                        <input class="form-check-input bg-warning" type="checkbox" id="flexSwitchCheckDefault" checked
+                        data-bs-toggle="collapse" data-bs-target=".swiper" 
+                        aria-expanded="true" aria-controls="swiper">
+                    </div>
+                </div>
+            </div>
+
+        <div class="loading">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <div class="row" id="meals-container">
+            <!-- Cards will be inserted here -->
+        </div>
+    </div>
+
+    <div class="visits-count">
+        <i class="fas fa-users"></i> <span id="visit-counter"></span>
+    </div>
+
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" style="color: #f7ed8f; background-color: #013b3b;">
+                    <div class="modal-title fs-5" id="helpModalLabel">도움말</div>
+                    <div type="button" class="text-light" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></div>
+                </div>
+                <div class="modal-body " id="helpContent"   style="background-color: WhiteSmoke;">
+                    <!-- 마크다운 내용이 여기에 로드됩니다 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/webSocket.js"></script>
+    
+</body>
+</html>

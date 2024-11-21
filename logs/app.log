@@ -1,0 +1,10 @@
+2024-11-21 17:47:32,820 - uvicorn.error - INFO - Started server process [964]
+2024-11-21 17:47:32,821 - uvicorn.error - INFO - Waiting for application startup.
+2024-11-21 17:47:32,826 - uvicorn.error - INFO - Application startup complete.
+2024-11-21 17:47:33,109 - uvicorn.error - INFO - ('192.168.200.254', 9303) - "WebSocket /ws?client_id=71593568-161a-4ab0-b895-6242fd43a0f1" [accepted]
+2024-11-21 17:47:33,110 - uvicorn.error - INFO - connection open
+2024-11-21 17:48:46,040 - uvicorn.error - INFO - Shutting down
+2024-11-21 17:48:46,041 - uvicorn.error - INFO - connection closed
+2024-11-21 17:48:46,145 - uvicorn.error - INFO - Waiting for application shutdown.
+2024-11-21 17:48:46,146 - uvicorn.error - INFO - Application shutdown complete.
+2024-11-21 17:48:46,148 - uvicorn.error - INFO - Finished server process [964]
