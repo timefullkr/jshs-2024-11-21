@@ -297,12 +297,10 @@ async def get_dates():
 
 if __name__ == "__main__":
     # 환경 변수에서 HOST와 PORT 가져오기 (기본값 설정)
-    HOST = os.getenv('HOST', '192.168.200.100')
-    PORT = int(os.getenv('PORT', 8000))
+    import socket                      # 네트워크 기능
+    hostname = socket.gethostname()
+    HOST = socket.gethostbyname(hostname)
+    PORT = 8080
     
-    uvicorn.run(
-        "main:app",
-        host=HOST,
-        port=PORT,
-        reload=True
-    )
+    # uvicorn 서버 실행 (자동 재시작 활성화)
+    uvicorn.run("main:app", host=HOST, port=PORT, reload=True)
